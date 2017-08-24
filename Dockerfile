@@ -7,9 +7,9 @@ RUN apk update && apk add certbot bash
 EXPOSE 80
 EXPOSE 443
 
-ADD runner.sh /etc/letsencrypt/runner.sh
+ADD runner.sh /runner.sh
 
 WORKDIR /etc/letsencrypt
 
-CMD ["sh", "/etc/letsencrypt/runner.sh"]
+CMD ["bash", "/runner.sh"]
 
